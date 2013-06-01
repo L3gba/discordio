@@ -9,14 +9,14 @@ class ArticleAdmin(admin.ModelAdmin):
     pass
 
 
-class ImagesAdmin(admin.ModelAdmin):
+class ImageAdmin(admin.ModelAdmin):
     pass
 
 
-class CategoriesAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(Images, ImagesAdmin)
-admin.site.register(Categories, CategoriesAdmin)
+admin.site.register(Image, ImageAdmin)
+admin.site.register(Category, CategoryAdmin)

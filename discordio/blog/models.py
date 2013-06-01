@@ -1,6 +1,6 @@
 from django.db import models
 
-class Categories(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.CharField(max_length=50)
     
@@ -17,7 +17,7 @@ class Author(models.Model):
         return "%s %s" % (self.first_name, self.last_name)
     
     
-class Images(models.Model):
+class Image(models.Model):
     title = models.CharField(max_length=255)
     url = models.URLField()
     
@@ -30,8 +30,8 @@ class Article(models.Model):
     body = models.TextField()
     slug = models.CharField(max_length=100)
     author = models.ForeignKey(Author)
-    categories = models.ManyToManyField(Categories)
-    images = models.ManyToManyField(Images)
+    categories = models.ManyToManyField(Category)
+    images = models.ManyToManyField(Image)
     
     def __unicode__(self):
         return self.title
