@@ -32,6 +32,8 @@ class Article(models.Model):
     author = models.ForeignKey(Author)
     categories = models.ManyToManyField(Category)
     images = models.ManyToManyField(Image)
+    date_published = models.DateTimeField(auto_now_add=True)
+    is_hot = models.BooleanField(default=True)
     
     def __unicode__(self):
         return self.title
