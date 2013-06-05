@@ -1,0 +1,10 @@
+html, a {
+	margin:0;
+	padding:0;
+	border:none;
+	text-decoration: none;
+	}
+	
+body {
+	background-color: #474747;
+	}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'style.css' %}" media="screen" type="text/css" />
+	</head>
+	
+	<body>
+	
+		<header>
+			<div id="logo"></div>
+			<nav>
+				<ul>
+					{% for category in categories %}
+					<li>{{ category }}</li>
+					{% endfor %}				
+				</ul>			
+			</nav>		
+		</header>
+		
+		<div id="body_wrapper">
+			<div id="timeline">
+				{% block timeline %}{% endblock %}			
+			</div>		
+		</div>
+
+	</body>
+
+</html>
