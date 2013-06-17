@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% for user, tweets in user_pack.items %}
+		<div class="user">{{ user }}</div>
+		{% for tweet in tweets %}
+			
+	
+					<div class="date">{{ tweet.0 }}</div>
+					<div class="text">{{ tweet.1 }}</div>
+					<div class="tweet_link"><a href="{{ tweet.2 }}">{{ tweet.2 }}</a></div>		
+				
+			
+		{% endfor %}
+	{% endfor %}
+
+{% endblock %}
